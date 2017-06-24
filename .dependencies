@@ -24,27 +24,35 @@ git:
         path: user/plugins/login
         branch: master
     admin:
+        url: https://github.com/getgrav/grav-plugin-admin
         path: user/plugins/admin
         branch: master
-    archive:
-        path: user/plugins/archive
+    archives:
+        url: https://github.com/getgrav/grav-plugin-archives
+        path: user/plugins/archives
         branch: master
     comments:
+        url: https://github.com/getgrav/grav-plugin-comments
         path: user/plugins/comments
         branch: master
     feed:
+        url: https://github.com/getgrav/grav-plugin-feed
         path: user/plugins/feed
         branch: master
     jscomments:
+        url: https://github.com/Sommerregen/grav-plugin-jscomments
         path: user/plugins/jscomments
         branch: master
     simplesearch:
+        url: https://github.com/getgrav/grav-plugin-simplesearch
         path: user/plugins/simplesearch
         branch: master
     socialbuttons:
+        url: https://github.com/giansi/grav-plugin-social-buttons
         path: user/plugins/socialbuttons
         branch: master
     taxonomylist:
+        url: https://github.com/getgrav/grav-plugin-taxonomylist
         path: user/plugins/taxonomylist
         branch: master
 links:
@@ -76,8 +84,8 @@ links:
         src: grav-plugin-admin
         path: path: user/plugins/admin
         scm: github
-    archive:
-        src: grav-plugin-archive
+    archives:
+        src: grav-plugin-archives
         path: user/plugins/archive
         scm: github
     comments:
