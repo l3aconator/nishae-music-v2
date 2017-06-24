@@ -1,0 +1,23 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set ph = page.header %}
+
+{% block content %}
+
+    {% if ph.videoEmbed %}
+    <section class="about video-embed section-pad">
+      <div class="container">
+          <div class="video-wrapper">
+            <iframe width="1280" height="720" src="{{ ph.videoEmbed }}" frameborder="0" allowfullscreen></iframe>
+          </div>
+      </div>
+    </section>
+    {% endif %}
+
+    <section class="header-white section-pad about-content">
+        <div class="container">
+            {{ page.content }}
+        </div>
+    </section>
+
+{% endblock %}

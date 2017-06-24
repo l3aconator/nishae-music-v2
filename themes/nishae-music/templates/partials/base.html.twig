@@ -1,0 +1,105 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<head>
+
+{% block head %}
+<meta charset="utf-8" />
+<title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+{% include 'partials/metadata.html.twig' %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
+<link rel="canonical" href="{{ page.url(true, true) }}" />
+
+<script src="https://use.typekit.net/eyb1klv.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+{% block stylesheets %}
+{% do assets.addCss('theme://css-compiled/styles.min.css',101) %}
+{% endblock %}
+{{ assets.css() }}
+
+{% block javascripts %}
+{% do assets.addJs('jquery',101) %}
+{% do assets.addJs('theme://js-min/scripts.min.js') %}
+{% endblock %}
+{{ assets.js() }}
+
+{% endblock head%}
+
+{% include 'partials/ga.html.twig' %}
+</head>
+<body id="top" class="{{ page.header.body_classes }}">
+
+    <div id="sb-site">
+        {% block header %}
+        <header class="header">
+            <div class="container u-cf">
+                <div class="main-logo">
+                    <a href="{{ base_url }}">
+                        <img src="{{ url('theme://images/logo.svg') }}" alt="Nishae Music Logo" />
+                    </a>
+                </div>
+                <div class="desktop-hide">
+                    <div class="mobile-menu js-menuToggle">
+                        <span>Menu</span>
+                    </div>
+                </div>
+                <div class="mobile-hide js-menu">
+                    <div class="main-nav">
+
+                        {% block header_extra %}{% endblock %}
+                        {% if config.plugins.langswitcher.enabled %}
+                        {% include 'partials/langswitcher.html.twig' %}
+                        {% endif %}
+
+                        {% block header_navigation %}
+                        {% include 'partials/navigation.html.twig' %}
+                        {% endblock %}
+
+                    </div>
+                    <div class="header-social">
+                            {% include 'partials/footer-social.html.twig' %}
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endblock %}
+
+        {% block showcase %}{% endblock %}
+
+        {% block body %}
+        <section class="body" class="{{ class }}">
+            {% block content %}
+
+            {% endblock %}
+        </section>
+        {% endblock %}
+
+
+    </div>
+
+    <!-- Begin footer -->
+    {% block footer %}
+    {% include 'partials/footer.html.twig' %}
+    {% endblock %}
+    <!-- End footer -->
+
+    {% block bottom %}
+    <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=58b4a67c1d713c001295f016&product=inline-share-buttons"></script>
+    {% endblock %}
+</body>
+
+<!-- TODO -->
+<!--
+•seo
+•imagery
+•rest of the homepage
+•the press page
+•other content from Alex
+•video
+-->
+<!-- END TODO -->
+
+</html>

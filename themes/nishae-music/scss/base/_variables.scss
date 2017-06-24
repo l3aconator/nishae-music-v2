@@ -1,0 +1,69 @@
+// Variables
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Breakpoints
+$bp-larger-than-mobile    : "min-width: 400px" !default;
+$bp-larger-than-phablet   : "min-width: 550px" !default;
+$bp-larger-than-tablet    : "min-width: 750px" !default;
+$bp-larger-than-desktop   : "min-width: 1000px" !default;
+$bp-larger-than-desktophd : "min-width: 1200px" !default;
+
+// Colors
+$light-grey: #D5D8E0 !default;
+$middle-grey: #52585B !default;
+$dark-grey: #393D3D !default;
+$white: white;
+
+// Brand Colors
+$dark-blue: #22386E !default;
+$turq: #B7F0F2 !default;
+$purple: #F1CEFF !default;
+$orange: #FFC9C0 !default;
+$red: $orange !default;
+$green: $turq !default;
+$tan: #E8D8B7 !default;
+$yellow: #FFECAC !default;
+
+$primary-color: $dark-blue !default;
+$secondary-color: $middle-grey !default;
+$border-color: $light-grey !default;
+$link-color: $turq !default;
+$font-color: $dark-grey !default;
+
+// Typography
+$base-font-family: 'ATCOverlook-Regular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$base-font-family-italic: 'ATCOverlook-RegularItalic', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-family-bold: 'ATCOverlook-Bold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$yeseva-font-family: $base-font-family;
+
+// Type Sizes
+$type-size-base: 1.5rem; // ~15px
+$type-size-h1: 4.0rem;
+$type-size-h2: 3.6rem;
+$type-size-h3: 3.0rem;
+$type-size-h4: 2.4rem;
+$type-size-h5: 1.75rem;
+$type-size-h6: 1.25rem;
+
+// Grid Variables
+$container-width: 80% !default;
+$container-width-larger-than-mobile: 85% !default;
+$container-width-larger-than-phablet: 80% !default;
+$total-columns: 12 !default;
+$column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
+$column-margin: 4% !default; // space between columns
+
+// Default Transitions
+$default-transition-all: all 200ms ease-in;
+$link-transition: color 200ms ease-in;
+
+// Box Shadow
+$default-box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.27);
+
+// Misc
+$global-radius: 4px !default;
+
+//Padding
+$base-padding: 20px;
+$medium-padding: 40px;
+$large-padding: 60px;

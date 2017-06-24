@@ -1,0 +1,35 @@
+name: Nishae Music
+version: 1.0.0
+description: "Nishae Music custom theme"
+icon: empire
+author:
+  name: Kyle Bacon
+  email: hello@kylebaconcreative.com
+  url: http://www.kylebaconcreative.com
+homepage: http://www.kylebaconcreative.com
+demo: http://demo.getgrav.org/blog-skeleton
+keywords: theme, modern, fast, responsive, html5, css3
+bugs: http://www.kylebaconcreative.com
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    default_lang:
+      type: text
+      size: x-small
+      label: Default lang
+      default: 'en'
+      validate:
+        type: text
+
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool

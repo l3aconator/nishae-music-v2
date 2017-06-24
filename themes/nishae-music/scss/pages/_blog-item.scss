@@ -1,0 +1,135 @@
+.list-item {
+
+    .social-sharing {
+        margin-top: $base-padding;
+        margin-bottom: $base-padding;
+    }
+
+    .continue-reading {
+        padding-bottom: $medium-padding;
+    }
+
+    .blog-content {
+
+        p {
+
+            &:first-child {
+                font-size: $type-size-h5;
+                // font-family: $base-font-family-bold;
+            }
+        }
+    }
+}
+
+.list-blog-header {
+
+    img {
+        width: 100%;
+        padding: 0 !important;
+        border-top-right-radius: 100px;
+        margin-bottom: $base-padding;
+        @include button-hover;
+    }
+}
+
+.blog-heading {
+
+    a {
+        color: $dark-blue;
+        text-decoration: none;
+        line-height: 1.4;
+        transition: $link-transition;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: darken($dark-blue, 10%);
+        }
+    }
+}
+
+.list-blog-date {
+
+    .h {
+        font-family: $base-font-family-bold;
+    }
+
+    .h,
+    .m,
+    .d,
+    .y {
+        color: $middle-grey;
+    }
+}
+
+.blog-item {
+    padding: $medium-padding;
+    color: $dark-grey;
+
+    img {
+        transition: all 500ms ease;
+        display: block;
+        width: 100%;
+        padding: 20px;
+
+        &.inline {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        &.full {
+            margin-left: -20px;
+            margin-right: -20px;
+            margin-bottom: -18px;
+        }
+
+        &.half {
+            width: 100%;
+        }
+
+        &.thirds {
+            width: 100%;
+        }
+
+        &.float-left {
+            float: left;
+
+            &:first-child {
+                margin-left: -20px;
+            }
+        }
+
+        &.float-right {
+            float: right;
+
+            &:first-child {
+                margin-right: -20px;
+            }
+        }
+    }
+}
+
+@media (#{$bp-larger-than-phablet}) {
+    .blog-item {
+        padding: $medium-padding;
+        padding-left: 0;
+
+        img {
+
+            &.half {
+                width: 50%;
+            }
+
+            &.thirds {
+                width: 33.33%;
+            }
+        }
+    }
+}
+
+@media (#{$bp-larger-than-tablet}) {
+    .blog-item {
+        padding: $large-padding;
+        padding-left: 0;
+    }
+}

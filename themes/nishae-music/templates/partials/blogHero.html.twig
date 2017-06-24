@@ -1,0 +1,21 @@
+{% set ph = page.header %}
+
+<section class="blog-img" style="background-image: url({{ page.media[ph.homepageHeaderImg].url }})">
+    <div class="container">
+        <div class="row">
+            <div class="five columns">
+                &nbsp;
+            </div>
+            <div class="six columns">
+                <div class="blog-hero-content">
+                    <div class="box">
+                        {{page.content}}
+                    </div>
+                </div>
+            </div>
+            <div class="one columns">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+</section>

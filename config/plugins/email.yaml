@@ -1,0 +1,15 @@
+enabled: true
+from: info@nishaemusic.com
+from_name: Nishae
+to: info@nishaemusic.com
+to_name: Nishae
+mailer:
+  engine: smtp
+  smtp:
+    server: localhost
+    port: 25
+    encryption: none
+  sendmail:
+    bin: /usr/sbin/sendmail
+content_type: text/html
+debug: false

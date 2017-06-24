@@ -1,0 +1,100 @@
+<article class="list-item">
+
+    {% set header_image = page.header.header_image|defined(true) %}
+    {% set header_image_width  = page.header.header_image_width|defined(900) %}
+    {% set header_image_height = page.header.header_image_height|defined(300) %}
+    {% set header_image_file = page.header.header_image_file %}
+
+    <div class="list-blog-header">
+        <a href="{{ page.url }}">
+            {% if header_image %}
+                {% if header_image_file %}
+                    {% set header_image_media = page.media.images[header_image_file] %}
+                {% else %}
+                    {% set header_image_media = page.media.images|first %}
+                {% endif %}
+                {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
+            {% endif %}
+        </a>
+        <h2 class="blog-heading"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+        <div>
+            <span class="list-blog-date">
+                <span class="h">Posted on:</span>
+                <span class="m">{{ page.date|date("M") }}</span>
+                <span class="d">{{ page.date|date("d") }},</span>
+                <span class="y">{{ page.date|date("Y") }}</span>
+            </span>
+        </div>
+
+        {% if page.taxonomy.tag %}
+        <span class="tags">
+            <span class="h">Tagged in:</span>
+            {% for tag in page.taxonomy.tag %}
+            <a class="list-blog-tag" href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </span>
+        {% endif %}
+    </div>
+
+    <div class="blog-content">
+
+    {% if page.header.continue_link is sameas(false) %}
+        {{ page.content }}
+        {% if not truncate %}
+        {% set show_prev_next = true %}
+        {% endif %}
+    {% elseif truncate and page.summary != page.content %}
+        {{ page.summary }}
+        <p class="continue-reading"><a class="button dark" href="{{ page.url }}">Continue Reading...</a></p>
+    {% elseif truncate %}
+        {% if page.summary != page.content %}
+            {{ page.content|truncate(550) }}
+        {% else %}
+            {{ page.content }}
+        {% endif %}
+        <p class="continue-reading"><a class="button dark" href="{{ page.url }}">Continue Reading...</a></p>
+    {% else %}
+        {{ page.content }}
+        {% set show_prev_next = true %}
+    {% endif %}
+
+    {% if show_prev_next %}
+
+        <div class="social-sharing">
+            <h5>Share this post with others:</h5>
+            <div class="sharethis-inline-share-buttons"></div>
+        </div>
+
+        <p class="prev-next">
+            {% if not page.isLast %}
+                <a class="button primary" href="{{ page.prevSibling.url }}"><span class="typcn typcn-chevron-left"></span>Prev</a>
+            {% endif %}
+
+            <a class="button primary" href="/blog"><span class="typcn typcn-home"></span>Blog Home</a>
+
+            {% if not page.isFirst %}
+                <a class="button primary" href="{{ page.nextSibling.url }}">Next<span class="typcn typcn-chevron-right"></span></a>
+            {% endif %}
+        </p>
+    {% endif %}
+
+    </div>
+
+
+
+    {% if page.header.continue_link is sameas(false) %}
+
+    {% elseif truncate and page.summary != page.content %}
+
+    {% elseif truncate %}
+
+    {% else %}
+    <h5>Post comments:</h5>
+    <div class="comments">
+        {% if config.plugins.jscomments.enabled %}
+            {{ jscomments() }}
+        {% endif %}
+    </div>
+    {% endif %}
+
+</article>

@@ -1,0 +1,41 @@
+<footer class="footer">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="three columns">
+                <a href="{{ base_url }}">
+                    <img class="footer-logo" src="{{ url('theme://images/logo-white.svg') }}" alt="Nishae Music logo" />
+                </a>
+                <h6>Follow me!</h6>
+                {% include 'partials/footer-social.html.twig' %}
+            </div>
+            <div class="three columns">
+                <h6><a href="/music/">Nishae's Music</a></h6>
+                <nav class="footer-nav-music">
+                    {% include 'partials/song-navigation.html.twig' %}
+                </nav>
+            </div>
+            <div class="three columns">
+                <h6>Recent Blog Posts</h6>
+                <nav class="footer-blog-nav">
+                    {% include 'partials/footer-blog-navigation.html.twig' %}
+                </nav>
+            </div>
+            <div class="three columns">
+                <h6>Other links</h6>
+                <nav class="footer-nav-other">
+                    <ul class="nav-list">
+                        <!-- TODO: PRESS ONLY -->
+                        <!-- <li class="nav-list-item"><a class="nav-link" href="/press/">Press</a></li> -->
+                        <li class="nav-list-item"><a class="nav-link" href="/contact">Contact</a></li>
+                        <li class="nav-list-item"><a class="nav-link" href="/press">Press</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <span>&copy; 2016 Alexandra Nitsche</span>
+        </div>
+    </div>
+</footer>

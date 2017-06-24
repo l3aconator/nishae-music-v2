@@ -1,0 +1,229 @@
+.song-header {
+    color: $dark-blue;
+
+    .song-album-art {
+        width: 100%;
+        transition: $default-transition-all;
+
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: $default-box-shadow;
+        }
+    }
+
+    &.header-red {
+        background: rgba(255, 200, 192, 0.75);
+
+        &:after {
+            background-image: url('/user/pages/02.music/come-away/Nishae-Bio-Video-8.jpg');
+        }
+    }
+
+    &.header-green {
+        background: rgba(17, 136, 141, 0.75);
+
+        &:after {
+            background-position: 100% 10%;
+            background-image: url('/user/pages/02.music/one-day/Nishae-Bio-Video-6.jpg');
+        }
+    }
+
+    &.header-orange {
+        background: rgba(255, 200, 192, 0.9);
+
+        &:after {
+            background-position: 100% 10%;
+            background-image: url('/user/pages/02.music/soul-searching/Nishae-Bio-Video-7.jpg');
+        }
+    }
+
+    &:after {
+        content: '';
+        opacity: 0.75;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: transform 500ms ease;
+    }
+}
+
+.download-buy {
+    background: $white;
+
+    .options-cont {
+        margin-bottom: $medium-padding;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    .options-box {
+        width: 100%;
+        background: $orange;
+        min-height: 255px;
+        transition: $default-transition-all;
+        color: $dark-blue;
+        position: relative;
+        z-index: 1;
+        padding-top: 10px;
+
+        &:before {
+            width: 100%;
+            height: 100%;
+            content: '';
+            background-color: transparent;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            border: 2px solid $dark-blue;
+            z-index: -1;
+            transition: $default-transition-all;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            &:before {
+                bottom: -2px;
+                left: -2px;
+            }
+        }
+
+        .content {
+            padding: $large-padding;
+        }
+    }
+}
+
+.download-other-song,
+.download-song-list {
+    background-color: $white;
+}
+
+.download-song-list {
+
+    .download-song-list-item {
+
+        .song-title {
+
+            a {
+                color: $dark-blue;
+            }
+        }
+    }
+}
+
+.about-song {
+    background-color: $yellow;
+
+    .about-song-title {
+        text-align: center;
+        color: $dark-blue;
+    }
+}
+
+.song-lyrics {
+    background-color: lighten($light-grey, 10%);
+
+    .lyrics-song-title {
+        color: $dark-blue;
+    }
+
+    .lyrics-content {
+        color: darken($tan, 80%);
+        margin-left: 0px;
+        margin-right: 0px;
+
+        .stanza-break {
+            padding-top: $base-padding;
+        }
+    }
+}
+
+.video-embed {
+    background-color: white;
+    padding-top: 0;
+}
+
+.song-embed-player {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: $medium-padding;
+}
+
+// Larger than phone
+@media (#{$bp-larger-than-mobile}) {
+    .song-lyrics {
+
+        .lyrics-content {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 550px) and (max-width: 750px){
+
+    .song-header {
+
+        .song-embed {
+            width: 100%;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .song-info {
+            width: 100%;
+            float: left;
+            box-sizing: border-box;
+        }
+
+    }
+}
+
+// Larger than phablet
+@media (#{$bp-larger-than-tablet}) {
+
+    .song-header {
+
+        .song-info {
+            padding-left: 110px;
+        }
+    }
+
+    .download-buy {
+
+        .options-cont {
+            margin-bottom: 0px;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .song-lyrics {
+
+        .lyrics-content {
+            margin-left: 25%;
+            margin-right: 25%;
+            font-size: 20px;
+            line-height: 1.75em;
+            font-weight: bold;
+        }
+    }
+
+    .song-embed-player {
+        margin-bottom: 0px;
+    }
+}

@@ -1,0 +1,132 @@
+.body {
+    padding-top: 112px;
+}
+.section-pad {
+    padding-top: $base-padding;
+    padding-bottom: $base-padding;
+}
+
+// Large than Mobile
+@media (#{$bp-larger-than-mobile}) {
+
+    .section-pad {
+        padding-top: $medium-padding;
+        padding-bottom: $medium-padding;
+    }
+}
+
+// Larger than phablet
+@media (#{$bp-larger-than-tablet}) {
+
+    .section-pad {
+        padding-top: $large-padding;
+        padding-bottom: $large-padding;
+    }
+}
+
+//Color modifiers
+.white {
+    color: $white;
+}
+
+.yellow {
+    color: $yellow;
+}
+
+.blue {
+    color: $dark-blue;
+}
+
+.header-white {
+    background: white;
+}
+
+.header-red {
+    background: $red;
+}
+
+.header-green {
+    background: $green;
+}
+
+.header-orange {
+    background: $orange;
+}
+
+.header-dark-blue {
+    background: $dark-blue;
+}
+
+.header-yellow {
+    background: $yellow;
+}
+
+.center {
+    text-align: center;
+}
+
+//Images
+.album-art {
+    width: 100%;
+    display: block;
+    z-index: 10;
+    margin-bottom: $medium-padding;
+    position: relative;
+}
+
+// Larger than phablet (also point when grid becomes active)
+@media (#{$bp-larger-than-phablet}) {
+    .album-art {
+        margin-bottom: 0px;
+    }
+
+}
+
+//Song Title base
+.song-title,
+a.song-title {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1;
+    display: block;
+
+    &:before {
+        content: '';
+        display: block;
+        border-top: 3px solid $dark-blue;
+        width: 200px;
+        position: absolute;
+        bottom: 0;
+        left: -100px;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid $dark-blue;
+        width: 250px;
+        position: absolute;
+        top: 0;
+        left: 75px;
+    }
+
+    &.yellow {
+
+        &:before {
+            border-top: 3px solid $yellow;
+        }
+
+        &:after {
+            border-bottom: 3px solid $yellow;
+        }
+
+    }
+}
+
+.song-title {
+
+    a {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,37 @@
+<section class="download-buy section-pad">
+  <div class="container">
+    <div class="row">
+      <div class="four columns options-cont">
+        <div class="options-box">
+          <div class="content">
+            <h5 class="white">Pay what you want</h5>
+            {% if ph.songButton %}
+              <a class="button secondary" href="{{ ph.songButtonURL }}" class="button dark">{{ ph.songButton }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="four columns options-cont">
+        <div class="options-box">
+          <div class="content">
+            <h5 class="white">Share social</h5>
+            {% include 'partials/socialbuttons.html.twig' with {'url' : page.url} %}
+          </div>
+        </div>
+      </div>
+      <div class="four columns options-cont">
+        <div class="options-box">
+          <div class="content">
+            <!--Mailchimp form-->
+            <h5 class="white">Sign up for emails</h5>
+            <form>
+                <label class="yellow">Your email:</label>
+                <input class="u-full-width" type="email" placeholder="Join my email list!">
+              <input class="button secondary" type="submit" value="Sign up" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

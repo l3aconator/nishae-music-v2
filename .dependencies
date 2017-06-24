@@ -1,0 +1,106 @@
+git:
+    problems:
+        url: https://github.com/getgrav/grav-plugin-problems
+        path: user/plugins/problems
+        branch: master
+    error:
+        url: https://github.com/getgrav/grav-plugin-error
+        path: user/plugins/error
+        branch: master
+    markdown-notices:
+        url: https://github.com/getgrav/grav-plugin-markdown-notices
+        path: user/plugins/markdown-notices
+        branch: master
+    form:
+        url: https://github.com/getgrav/grav-plugin-form
+        path: user/plugins/form
+        branch: master
+    email:
+        url: https://github.com/getgrav/grav-plugin-email
+        path: user/plugins/email
+        branch: master
+    login:
+        url: https://github.com/getgrav/grav-plugin-login
+        path: user/plugins/login
+        branch: master
+    admin:
+        path: user/plugins/admin
+        branch: master
+    archive:
+        path: user/plugins/archive
+        branch: master
+    comments:
+        path: user/plugins/comments
+        branch: master
+    feed:
+        path: user/plugins/feed
+        branch: master
+    jscomments:
+        path: user/plugins/jscomments
+        branch: master
+    simplesearch:
+        path: user/plugins/simplesearch
+        branch: master
+    socialbuttons:
+        path: user/plugins/socialbuttons
+        branch: master
+    taxonomylist:
+        path: user/plugins/taxonomylist
+        branch: master
+links:
+    problems:
+        src: grav-plugin-problems
+        path: user/plugins/problems
+        scm: github
+    error:
+        src: grav-plugin-error
+        path: user/plugins/error
+        scm: github
+    markdown-notices:
+        src: grav-plugin-markdown-notices
+        path: user/plugins/markdown-notices
+        scm: github
+    form:
+        src: grav-plugin-form
+        path: user/plugins/form
+        scm: github
+    email:
+        src: grav-plugin-email
+        path: user/plugins/email
+        scm: github
+    login:
+        src: grav-plugin-login
+        path: user/plugins/login
+        scm: github
+    admin:
+        src: grav-plugin-git-sync
+        path: path: user/plugins/admin
+        scm: github
+    archive:
+        src: grav-plugin-git-sync
+        path: user/plugins/archive
+        scm: github
+    comments:
+        src: grav-plugin-git-sync
+        path: user/plugins/comments
+        scm: github
+    feed:
+        src: grav-plugin-git-sync
+        path: user/plugins/feed
+        scm: github
+    jscomments:
+        src: grav-plugin-git-sync
+        path: user/plugins/jscomments
+        scm: github
+    simplesearch:
+        src: grav-plugin-git-sync
+        path: user/plugins/simplesearch
+        scm: github
+    socialbuttons:
+        src: grav-plugin-git-sync
+        path: user/plugins/socialbuttons
+        scm: github
+    taxonomylist:
+        src: grav-plugin-git-sync
+        path: user/plugins/taxonomylist
+        scm: github

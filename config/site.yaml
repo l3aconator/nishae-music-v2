@@ -1,0 +1,17 @@
+title: Nishae Music
+author:
+  name: 'Alex Nitsche'
+  email: hello@kylebaconcreative.com
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Nishae is a singer songwriter residing in Portland, Oregon. Born in Texas and raised all over the world, her musical influence combines, cinematic instrumentation, R&B vocal harmonies, and emotionally driven piano segments.'
+  robots: 'NOINDEX, NOFOLLOW'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

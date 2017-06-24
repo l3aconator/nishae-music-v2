@@ -1,0 +1,115 @@
+{% embed 'partials/base.html.twig' %}
+
+{% set ph = page.header %}
+
+{% block content %}
+
+<section class="song-header section-pad {{ ph.body_classes }}">
+    <div class="container">
+        <div class="five columns song-embed">
+            {% if ph.spotify %}
+            <iframe class="song-embed-player" src="{{ ph.spotify }}" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
+            {% endif %}
+
+            {% if ph.soundcloud %}
+            <iframe class="song-embed-player" width="300" height="300" scrolling="no" frameborder="no" src="{{ ph.soundcloud }}"></iframe>
+            {% endif %}
+
+            {% if ph.fallbackPlay == true %}
+            <a href="{{ ph.fallbackPlay }}">
+                <img class="song-album-art" src="{{ page.media[ph.albumArt].url }}" alt="{{ ph.albumArtAlt }}" />
+            </a>
+            {% endif %}
+
+        </div>
+        <div class="seven columns song-info">
+            <h1 class="song-title">{{ page.title }}</h1>
+            <p class="song-description">{{ ph.songIntro }}</p>
+
+            <div class="row">
+                <div class="six columns">
+                    {% if ph.songButton %}
+                    <a href="{{ ph.songButtonURL }}" target="_blank" rel="noopeneer" class="button dark large">{{ ph.songButton }}</a>
+                    {% endif %}
+                </div>
+                <div class="six columns">
+                    {% if ph.songSharing %}
+                    <h6>Sharing</h6>
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% if ph.songSharing %}
+{% include 'partials/download-buy-three-col.html.twig' %}
+{% else %}
+{% include 'partials/email-cta.html.twig' %}
+{% endif %}
+
+{% if ph.videoEmbed %}
+<section class="video-embed section-pad">
+    <div class="container">
+        <div class="video-wrapper">
+            <iframe width="1280" height="720" src="{{ ph.videoEmbed }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{% if ph.aboutSongTitle %}
+<section class="about-song section-pad">
+    <div class="container">
+        <h2 class="about-song-title">{{ ph.aboutSongTitle }}</h2>
+        <p class="about-song-content">{{ ph.aboutSongContent }}</p>
+    </div>
+</section>
+{% endif %}
+
+<section class="song-lyrics section-pad">
+    <div class="container">
+        <div class="lyrics-content">
+            <h3 class="lyrics-song-title">Song lyrics for {{ page.title }}</h3>
+            {{ page.content }}
+        </div>
+    </div>
+</section>
+
+<section class="download-other-song section-pad">
+    <div class="container">
+        <h2 class="u-text-center blue">Checkout my other songs</h2>
+    </div>
+
+    <ul class="download-song-list">
+
+        {% for p in page.find('/music').children if p != page %}
+        <li class="download-song-list-item">
+            <div class="container">
+                <div class="row">
+                    <div class="four columns">
+                        <a href="{{ p.url }}">
+                            <div class="box image">
+                                <img class="album-art" src="{{ p.media[p.header.albumArt].url }}" alt="{{ p.header.albumArtAlt }}" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="eight columns">
+                        <h3 class="song-title"><a href="{{p.url}}">{{ p.title }}</a></h3>
+                        <p class="song-description">{{ p.header.songIntro }}</p>
+                        {% if p.header.songButton %}
+                        <a href="{{ p.url }}" class="button dark">Check it out</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+
+    </ul>
+</section>
+
+{% endblock %}
+
+{% endembed %}

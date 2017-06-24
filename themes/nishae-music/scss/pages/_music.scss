@@ -1,0 +1,288 @@
+.music-page {
+    position: relative;
+}
+
+.sidebar-floating {
+    width: 200px;
+    position: fixed;
+    right: 0;
+    top: 25%;
+    bottom: 50%;
+
+    ul {
+
+        li {
+            list-style: none;
+            list-style-type: none;
+
+            h6 {
+
+                a {
+                    font-family: $base-font-family;
+                    font-size: 14px;
+                    color: $yellow;
+                    text-decoration: none;
+                    position: relative;
+                    border-bottom: 3px solid transparent;
+                    transition: $default-transition-all;
+                    display: block;
+
+                    &:after {
+                        display: block;
+                        content: '';
+                        left: -30px;
+                        border-bottom: 3px solid transparent;
+                        width: 0px;
+                        position: absolute;
+                        transition: $default-transition-all;
+                    }
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: darken($yellow, 10%);
+
+                        &:after {
+                            display: block;
+                            content: '';
+                            width: 55px;
+                            border-bottom: 3px solid darken($yellow, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.song-list {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+
+    li {
+        display: block;
+        width: 100%;
+        height: 60vh;
+        margin-bottom: 0;
+        position: relative;
+        transition: background 500ms ease,
+                    opacity 500ms ease;
+        overflow: hidden;
+
+        &.header-red {
+            background: rgba(157, 84, 87, 0.5);
+
+            &:hover {
+                background: rgba(157, 84, 87, 0);
+            }
+        }
+
+        &.header-green {
+            background: rgba(17, 136, 141, 0.5);
+
+            &:hover {
+                background: rgba(17, 136, 141, 0);
+            }
+        }
+
+        &.header-orange {
+            background: rgba(223, 112, 95, 0.5);
+
+            &:hover {
+                background: rgba(223, 112, 95, 0);
+            }
+        }
+
+        &:after {
+            content: '';
+            opacity: 0.75;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: transform 500ms ease;
+        }
+
+        &:hover {
+
+            &:after {
+                opacity: 1;
+                transform: scale(1.25);
+            }
+        }
+
+        &#Com {
+
+            &:after {
+                background-image: url('/user/pages/02.music/come-away/Nishae-Bio-Video-8.jpg');
+            }
+
+        }
+
+        &#One {
+
+            &:after {
+                background-position: 100% 10%;
+                background-image: url('/user/pages/02.music/one-day/Nishae-Bio-Video-6.jpg');
+            }
+        }
+
+        &#Sou {
+
+            &:after {
+                background-position: 100% 10%;
+                background-image: url('/user/pages/02.music/soul-searching/Nishae-Bio-Video-7.jpg');
+            }
+        }
+    }
+
+    .content-parent {
+        width: 100%;
+        height: 50vh;
+        position: relative;
+
+        .content {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .music-song-title {
+        font-size: 5em;
+        color: white;
+        text-decoration: none;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+        position: relative;
+
+        .icon-circle {
+            display: inline-block;
+            margin-left: 20px;
+            text-align: baseline;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.25);
+            border-radius: 100%;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.0);
+            position: absolute;
+            transition: all 500ms ease;
+
+            .typcn {
+                position: absolute;
+                top: -5px;
+                left: 10px;
+                opacity: .5;
+            }
+        }
+    }
+
+    .next-container {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        right: 50%;
+        margin-bottom: $medium-padding;
+        text-align: center;
+
+        .next {
+            cursor: pointer;
+            width: 100%;
+
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.header-red {
+
+    .music-song-title {
+        color: $yellow;
+        transition: $link-transition;
+
+        // &:hover,
+        // &:active,
+        // &:focus {
+        //     color: darken($yellow, 20%);
+        // }
+    }
+
+    .song-list-item-link {
+
+        &:hover,
+        &:active,
+        &:focus {
+
+            .music-song-title {
+                color: lighten($yellow, 10%);
+
+                .icon-circle {
+                    background-color: rgba(255, 255, 255, 0);
+                }
+            }
+        }
+    }
+}
+
+.header-green {
+
+    .music-song-title {
+        color: $dark-blue;
+        transition: $link-transition;
+    }
+
+    .song-list-item-link {
+
+        &:hover,
+        &:active,
+        &:focus {
+
+            .music-song-title {
+                color: lighten($dark-blue, 10%);
+
+                .icon-circle {
+                    background-color: rgba(255, 255, 255, 0);
+                }
+            }
+        }
+    }
+}
+
+.header-orange {
+
+    .music-song-title {
+        color: $red;
+        transition: $link-transition;
+    }
+
+    .song-list-item-link {
+
+        &:hover,
+        &:active,
+        &:focus {
+
+            .music-song-title {
+                color: lighten($red, 10%);
+
+                .icon-circle {
+                    background-color: rgba(255, 255, 255, 0);
+                }
+            }
+        }
+    }
+}
+
+.song-list-item-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+}

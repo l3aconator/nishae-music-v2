@@ -1,0 +1,60 @@
+.options-box {
+
+  .rrssb-buttons {
+
+    li {
+      width: 50% !important;
+      padding-right: 10px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    &.small-format {
+
+      li {
+
+      }
+    }
+
+    &.large-format {
+
+      li {
+
+        a {
+          .rrssb-text {
+            text-transform: capitalize;
+            font-family: $yeseva-font-family;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  .rrssb-facebook,
+  .rrssb-twitter,
+  .rrssb-googleplus,
+  .rrssb-linkedin,
+  .rrssb-email {
+    a {
+      border-top-right-radius: 20px !important;
+      border-bottom-left-radius: 20px !important;
+      margin-right: 10px;
+    }
+  }
+}
+
+.rrssb-buttons {
+
+  li {
+
+    a {
+
+      &:hover {
+        @include button-hover;
+      }
+    }
+  }
+
+}

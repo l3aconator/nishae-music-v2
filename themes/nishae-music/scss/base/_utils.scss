@@ -1,0 +1,40 @@
+// Utilities
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+.u-pull-left {
+  float: left;
+}
+
+//Alignment modifiers
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-center-btn {
+    display: block !important;
+    text-align: center !important;
+    margin-right: auto;
+    margin-left: auto;
+}

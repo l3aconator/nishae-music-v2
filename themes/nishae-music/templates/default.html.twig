@@ -1,0 +1,48 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+{% if page.header.homepageHeader %}
+<section class="header-img" style="background-image: url({{ page.media[page.header.homepageHeaderImg].url }})">
+    <div class="container section-pad">
+        <div class="box half">
+            <h1 class="center">{{ page.title }}</h1>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{% if page.header.patreonCTA %}
+<section>
+    <div class="container section-pad">
+        <h3>Support me on Patreon</h3>
+        <p>
+            Content about patreon goes here
+        </p>
+
+        <a class="button dark" href="https://www.patreon.com/Nishae" target="_blank">Go To Patreon</a>
+    </div>
+</section>
+{% endif %}
+
+{% if page.header.songSharing %}
+{% include 'partials/download-buy-three-col.html.twig' %}
+{% else %}
+{% include 'partials/email-cta.html.twig' %}
+{% endif %}
+
+<section>
+    <div class="container section-pad">
+        {{ page.content }}
+    </div>
+</section>
+
+{% if page.header.paypal %}
+<section class="">
+    <div class="container section-pad">
+        <h3>PAYPAL GOES HERE, WE NEED THIS SETUP</h3>
+    </div>
+</section>
+{% endif %}
+
+{% endblock %}

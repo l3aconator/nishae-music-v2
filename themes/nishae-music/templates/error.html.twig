@@ -1,0 +1,12 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+	<section id="error" class="section-pad">
+		<div class="container">
+			<h1>Error {{ page.header.http_response_code }}</h1>
+			<p>
+				{{ page.content }}
+			</p>
+		</div>
+	</section>
+{% endblock %}
