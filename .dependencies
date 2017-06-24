@@ -73,34 +73,34 @@ links:
         path: user/plugins/login
         scm: github
     admin:
-        src: grav-plugin-git-sync
+        src: grav-plugin-admin
         path: path: user/plugins/admin
         scm: github
     archive:
-        src: grav-plugin-git-sync
+        src: grav-plugin-archive
         path: user/plugins/archive
         scm: github
     comments:
-        src: grav-plugin-git-sync
+        src: grav-plugin-comments
         path: user/plugins/comments
         scm: github
     feed:
-        src: grav-plugin-git-sync
+        src: grav-plugin-feed
         path: user/plugins/feed
         scm: github
     jscomments:
-        src: grav-plugin-git-sync
+        src: grav-plugin-jscomments
         path: user/plugins/jscomments
         scm: github
     simplesearch:
-        src: grav-plugin-git-sync
+        src: grav-plugin-simplesearch
         path: user/plugins/simplesearch
         scm: github
     socialbuttons:
-        src: grav-plugin-git-sync
+        src: grav-plugin-socialbuttons
         path: user/plugins/socialbuttons
         scm: github
     taxonomylist:
-        src: grav-plugin-git-sync
+        src: grav-plugin-taxonomylist
         path: user/plugins/taxonomylist
         scm: github
