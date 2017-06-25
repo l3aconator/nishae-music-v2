@@ -1,0 +1,61 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <section class="header-img" style="background-image: url({{ page.media[page.header.homepageHeaderImg].url }})">
+        <div class="container section-pad">
+            <div class="box half">
+                <h1 class="center">{{ page.title }}</h1>
+                <p>{{ page.header.subtitle }}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="download-buy">
+        <div class="container section-pad">
+            <div class="options-cont">
+                <div class="options-box">
+                    <div class="content">
+                        <h3>Patreon</h3>
+                        <p>
+                            {{ page.header.patreonCopy }}
+                        </p>
+                        <a class="button dark fill u-full-width u-center-btn" href="https://www.patreon.com/bePatron?u=769872">Become a Patron</a>
+                    </div>
+                </div>
+            </div>
+            <div class="options-cont u-mt-90">
+                <div class="options-box">
+                    <div class="content">
+                        <h3>Paypal</h3>
+                        <p>
+                            {{ page.header.paypalCopy }}
+                        </p>
+                        <a class="button dark fill u-full-width u-center-btn" href="/support-me">Support My Music</a>
+                    </div>
+                </div>
+            </div>
+            <div class="options-cont u-mt-90">
+                <div class="options-box">
+                    <div class="content">
+                        <h3>Spotify</h3>
+                        <p>
+                            {{ page.header.spotifyCopy }}
+                        </p>
+                        <a class="button dark fill u-full-width u-center-btn" href="/blog">Meraki Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% if page.content %}
+    <section>
+        <div class="container section-pad">
+            {{ page.content }}
+        </div>
+    </section>
+    {% endif %}
+
+    {% include 'partials/email-cta.html.twig' %}
+
+{% endblock %}

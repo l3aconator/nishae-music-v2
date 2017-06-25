@@ -1,31 +1,14 @@
 {% embed 'partials/base.html.twig' %}
+    {% set ph = page.header %}
 
-{% set ph = page.header %}
+    {% block content %}
 
-{% block content %}
-<section class="music-page">
-    {{ page.content }}
-    <section class="header-red section-pad secondary-hero">
-        <div class="container">
-            <div class="coverflow top10 bot10">
-                <a class="prev-arrow"></a>
-
-                {% for p in page.find('/music').children if p != page %}
-                <div class="coverflow__item">
-                    <a href="{{p.url}}" class="coverflow__link">
-                        <div class="coverflow__image-box">
-                            <img src="{{ p.media[p.header.albumArt].url }}" class="coverflow__image"/>
-                        </div>
-                    </a>
-                </div>
-                {% endfor %}
-
-                <a class="next-arrow"></a>
-            </div>
+    <section class="music-page">
+        <div class="container section-pad">
+            {{ page.content }}
         </div>
     </section>
-</section>
 
-{% endblock %}
+    {% endblock %}
 
 {% endembed %}
