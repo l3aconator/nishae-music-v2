@@ -1,3 +1,20 @@
+.blog-listings {
+
+    .list-item {
+        min-height: 648px;
+    }
+}
+
+.blog-hero-image {
+
+    img {
+        width: 100%;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+}
+
 .list-item {
 
     .social-sharing {
@@ -15,7 +32,6 @@
 
             &:first-child {
                 font-size: $type-size-h5;
-                // font-family: $base-font-family-bold;
             }
         }
     }

@@ -9,7 +9,7 @@ taxonomy:
         - fitness
         - dance
 body_classes: header-dark-blue
-header_image: '1'
+header_image: true
 ---
 
 Dance has been a part of my life since I was child. Before this project was even a thought,  I felt the correlation between dance and healing.  I have decided I would add this into my meraki mission. I have met some of my closest friends through dance. We have used dance to escape bad times. Dance helped me get through college. Maybe it was luck, or part of my path, I got the chance to nanny for a family while I was in college, and the mother is the most fabulous Dance fitness instructor (Shoutout to Gina Wonder). Through her passion, my own passion for dance grew. By the way, If you are in the Portland area she teaches a class called Hip Hop Turn-up. IF you would like more info on that leave a question in the comments below.

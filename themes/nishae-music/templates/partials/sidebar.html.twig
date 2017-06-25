@@ -18,46 +18,22 @@
                 <div id="mce-responses" class="clear">
                     <div class="response" id="mce-error-response" style="display:none"></div>
                     <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                </div>
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_34dcf9da775e7c20ee505c3a8_5244dbce6a" tabindex="-1" value=""></div>
                 <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button dark"></div>
             </div>
         </form>
     </div>
-
     <!--End mc_embed_signup-->
 </div>
-{% if page.header.ad %}
-<div class="blog-ad-space">
-    <img src="http://placehold.it/300x250" alt="" />
-</div>
-{% endif %}
-{% if config.plugins.simplesearch.enabled %}
-<div class="sidebar-content">
-    <h4>Search the blog</h4>
-    {% include 'partials/simplesearch_searchbox.html.twig' %}
-</div>
-{% endif %}
 {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
 <h4>Related Posts</h4>
 {% include 'partials/relatedpages.html.twig' %}
 {% endif %}
-{% if config.plugins.random.enabled %}
-<div class="sidebar-content">
-    <h4>Random Article</h4>
-    <a class="button" href="{{ base_url }}/random"><i class="fa fa-retweet"></i> I'm Feeling Lucky!</a>
-</div>
-{% endif %}
 {% if config.plugins.taxonomylist.enabled %}
 <div class="sidebar-content">
-    <h4>Popular Tags</h4>
+    <h4>Categories</h4>
     {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
-</div>
-{% endif %}
-{% if config.plugins.archives.enabled %}
-<div class="sidebar-content">
-    <h4>Archives</h4>
-    {% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
 </div>
 {% endif %}
 {% if config.plugins.feed.enabled %}

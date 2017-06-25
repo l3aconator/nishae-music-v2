@@ -27,14 +27,6 @@ git:
         url: https://github.com/getgrav/grav-plugin-admin
         path: user/plugins/admin
         branch: master
-    archives:
-        url: https://github.com/getgrav/grav-plugin-archives
-        path: user/plugins/archives
-        branch: master
-    comments:
-        url: https://github.com/getgrav/grav-plugin-comments
-        path: user/plugins/comments
-        branch: master
     feed:
         url: https://github.com/getgrav/grav-plugin-feed
         path: user/plugins/feed
@@ -42,14 +34,6 @@ git:
     jscomments:
         url: https://github.com/Sommerregen/grav-plugin-jscomments
         path: user/plugins/jscomments
-        branch: master
-    simplesearch:
-        url: https://github.com/getgrav/grav-plugin-simplesearch
-        path: user/plugins/simplesearch
-        branch: master
-    socialbuttons:
-        url: https://github.com/giansi/grav-plugin-social-buttons
-        path: user/plugins/socialbuttons
         branch: master
     taxonomylist:
         url: https://github.com/getgrav/grav-plugin-taxonomylist
@@ -80,18 +64,6 @@ links:
         src: grav-plugin-login
         path: user/plugins/login
         scm: github
-    admin:
-        src: grav-plugin-admin
-        path: path: user/plugins/admin
-        scm: github
-    archives:
-        src: grav-plugin-archives
-        path: user/plugins/archive
-        scm: github
-    comments:
-        src: grav-plugin-comments
-        path: user/plugins/comments
-        scm: github
     feed:
         src: grav-plugin-feed
         path: user/plugins/feed
@@ -99,14 +71,6 @@ links:
     jscomments:
         src: grav-plugin-jscomments
         path: user/plugins/jscomments
-        scm: github
-    simplesearch:
-        src: grav-plugin-simplesearch
-        path: user/plugins/simplesearch
-        scm: github
-    socialbuttons:
-        src: grav-plugin-socialbuttons
-        path: user/plugins/socialbuttons
         scm: github
     taxonomylist:
         src: grav-plugin-taxonomylist

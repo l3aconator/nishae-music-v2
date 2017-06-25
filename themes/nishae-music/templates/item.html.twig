@@ -2,16 +2,7 @@
 
 {% block content %}
 <section class="blog-item-box">
-    <div class="container">
-        <div class="row">
-            <div class="nine columns blog-item">
-                {% include 'partials/blog_item.html.twig' with {'blog':page.parent, 'truncate':false} %}
-            </div>
-            <aside class="three columns sidebar">
-                {% include 'partials/sidebar.html.twig' with {'blog':page.parent}%}
-            </aside>
-        </div>
-    </div>
+    {% include 'partials/blog_item.html.twig' with {'blog':page.parent, 'truncate':false} %}
 </section>
 {% endblock %}
 

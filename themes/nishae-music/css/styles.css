@@ -4348,6 +4348,14 @@ a.song-title {
   .blog-hero-content {
     margin-top: 10%; } }
 
+.blog-listings .list-item {
+  min-height: 648px; }
+
+.blog-hero-image img {
+  width: 100%;
+  display: block;
+  margin-bottom: 30px; }
+
 .list-item .social-sharing {
   margin-top: 20px;
   margin-bottom: 20px; }
