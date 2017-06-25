@@ -48,32 +48,21 @@
                 </div>
                 <div class="mobile-hide js-menu">
                     <div class="main-nav">
-
-                        {% block header_extra %}{% endblock %}
-                        {% if config.plugins.langswitcher.enabled %}
-                        {% include 'partials/langswitcher.html.twig' %}
-                        {% endif %}
-
                         {% block header_navigation %}
                         {% include 'partials/navigation.html.twig' %}
                         {% endblock %}
-
                     </div>
                     <div class="header-social">
-                            {% include 'partials/footer-social.html.twig' %}
+                        {% include 'partials/footer-social.html.twig' %}
                     </div>
                 </div>
             </div>
         </header>
         {% endblock %}
 
-        {% block showcase %}{% endblock %}
-
         {% block body %}
         <section class="body" class="{{ class }}">
-            {% block content %}
-
-            {% endblock %}
+            {% block content %}{% endblock %}
         </section>
         {% endblock %}
 
@@ -98,8 +87,8 @@
 •rest of the homepage
 •the press page
 •other content from Alex
-•video
 -->
+<!--  TODO: STYLE QUOTE SECTION -->
 <!-- END TODO -->
 
 </html>

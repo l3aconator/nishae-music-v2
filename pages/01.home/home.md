@@ -2,10 +2,9 @@
 title: Home
 visible: false
 
-homepageHeader: true
-homepageHeaderImg: 'Nishae-Bio-Video-2_EDIT.jpg'
+quote: 'This is the Meraki Mission&mdash;<em>to</em> do <em>something with soul</em>, <em>creativity</em>, or <em>love</em>. I put everything into my songs and highlight other people that use their own passion for self-discovery. <a class="u-mt-30" href="#cta">Sign up to join the Meraki Mission</a>'
 
-videoEmbed: 'https://www.youtube.com/embed/7f7KD6jYxnk?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=0;'
+videoEmbed: 'https://www.youtube.com/embed/5QeT_FEn4Rs?rel=0&amp;showinfo=0'
 ---
 >I wanted to create a project that was based purely on what I am passionate about. I didn’t want to think about genre, or impressing people. I wanted to create something that came from my heart. Once I realized how short life really is, I didn’t want to let fear or judgments made by others stop me from making music, and pursuing my passion.
 

@@ -9,6 +9,7 @@
 
     &.scroll {
         box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+        background-color: rgba(255, 255, 255, .75);
     }
 
     .mobile-hide {
@@ -164,7 +165,7 @@
             li {
                 display: inline;
                 margin-bottom: 0;
-                padding-right: 10px;
+                padding-right: 2px;
 
                 a {
                     color: darken($dark-blue, 10%);
@@ -209,7 +210,7 @@
 
         .main-logo {
             float: left;
-            width: 20%;
+            width: 18%;
 
             img {
                 margin-left: 0;
@@ -236,7 +237,7 @@
                     list-style-type: none;
                     display: inline-block;
                     width: auto;
-                    margin-right: $medium-padding;
+                    margin-right: 22px;
 
                     .drop-list {
                         display: none;
@@ -329,17 +330,19 @@
         }
 
         .header-social {
+            width: 15%;
+            float: left;
 
             ul {
                 display: inline;
                 margin-left: 0;
                 margin-right: 0;
                 float: right;
-                padding-top: 0;
+                padding-top: 8px;
 
                 li {
                     text-align: right;
-                    padding-right: 5px;
+                    padding-right: 2px;
 
                     .social-icon {
                         font-size: 24px;

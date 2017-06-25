@@ -11,12 +11,16 @@
                 </ul>
             {% endif %}
         </li>
+
     {% endfor %}
 {% endmacro %}
 
 <ul class="nav-list">
     {% if theme_config.dropdown.enabled %}
         {{ _self.loop(pages) }}
+        <li class="nav-list-item">
+            <a class= "nav-link patron-button" href="https://www.patreon.com/bePatron?u=769872">Become a Patron</a>
+        </li>
     {% else %}
         {% for page in pages.children.visible %}
             {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
@@ -34,7 +38,4 @@
             </a>
         </li>
     {% endfor %}
-    {% if config.plugins.login.enabled and grav.user.username %}
-        <li> {% include 'partials/login-status.html.twig' %}</li>
-    {% endif %}
 </ul>

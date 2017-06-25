@@ -1,78 +1,71 @@
 {% embed 'partials/base.html.twig' %}
+    {% set ph = page.header %}
 
-{% set ph = page.header %}
+    {% block content %}
+    <section>
+        <div class="container home-video">
+            <div class="row">
+                <div class="eight columns">
+                    <div class="video-wrapper">
+                        <iframe width="1280" height="720" src="{{ ph.videoEmbed }}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="four columns">
+                    <div class="" style="background-color: rgba(255,255,255, .75); padding: 20px; width: 100%;">
+                        <p class="hero-quote">{{ ph.quote }}</p>
+                    </div>
 
-{% block content %}
-
-{# {% if ph.homepageHeader %}
-{% include 'partials/homepageHero.html.twig' %}
-{% endif %} #}
-
-<div data-vide-bg="/user/pages/01.home/video/Hotline-Bling-Piano-Remix.mp4" data-vide-options="loop: false, muted: true, position: 0% 0%">
-    <div class="container home-video">
-        <div class="row">
-            <div class="eight columns">
-                <div class="video-wrapper">
-                    <iframe width="1280" height="720" src="{{ ph.videoEmbed }}" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="four columns">
-                <div class="" style="background-color: rgba(255,255,255, .75); padding: 20px; width: 100%;">
-                    <h1 class="h4">Lorem ipsum</h1>
-                    <p>Lorem</p>
-                </div>
 
-            </div>
         </div>
+    </section>
 
-    </div>
-</div>
-
-<section class="download-buy">
-    <div class="container section-pad">
-        <div class="row">
-            <div class="four columns">
-                <div class="options-cont">
-                    <div class="options-box">
-                        <div class="content">
-                            <a class="button dark u-full-width u-center-btn" href="/music">My Music</a>
+    <section class="download-buy">
+        <div class="container section-pad">
+            <div class="row">
+                <div class="four columns">
+                    <div class="options-cont">
+                        <div class="options-box">
+                            <div class="content">
+                                <a class="button dark u-full-width u-center-btn" href="/music">My Music</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="four columns">
-                <div class="options-cont">
-                    <div class="options-box">
-                        <div class="content">
-                            <a class="button dark u-full-width u-center-btn" href="/blog">Meraki Blog</a>
+                <div class="four columns">
+                    <div class="options-cont">
+                        <div class="options-box">
+                            <div class="content">
+                                <a class="button dark u-full-width u-center-btn" href="/support-me">Support My Music</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="four columns">
-                <div class="options-cont">
-                    <div class="options-box">
-                        <div class="content">
-                            <a class="button dark u-full-width u-center-btn" href="/support-me">Support My Music</a>
+                <div class="four columns">
+                    <div class="options-cont">
+                        <div class="options-box">
+                            <div class="content">
+                                <a class="button dark u-full-width u-center-btn" href="/blog">Meraki Blog</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section-pad about-content">
-    <div class="container">
-        {{ page.content }}
-    </div>
-</section>
+    <section class="section-pad about-content">
+        <div class="container">
+            {{ page.content }}
+        </div>
+    </section>
 
-{% if page.header.songSharing %}
-{% include 'partials/download-buy-three-col.html.twig' %}
-{% else %}
-{% include 'partials/email-cta.html.twig' %}
-{% endif %}
+    {% if page.header.songSharing %}
+    {% include 'partials/download-buy-three-col.html.twig' %}
+    {% else %}
+    {% include 'partials/email-cta.html.twig' %}
+    {% endif %}
 
-{% endblock %}
+    {% endblock %}
 {% endembed %}

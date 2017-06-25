@@ -1,35 +1,35 @@
 // Utilities
-//––––––––––––––––––––––––––––––––––––––––––––––––––
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .u-full-width {
-  width: 100%;
-  box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .u-max-full-width {
-  max-width: 100%;
-  box-sizing: border-box;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .u-pull-right {
-  float: right;
+    float: right;
 }
 
 .u-pull-left {
-  float: left;
+    float: left;
 }
 
-//Alignment modifiers
+// Alignment modifiers
 .u-text-center {
-  text-align: center;
+    text-align: center;
 }
 
 .u-text-right {
-  text-align: right;
+    text-align: right;
 }
 
 .u-text-left {
-  text-align: left;
+    text-align: left;
 }
 
 .u-center-btn {
@@ -37,4 +37,12 @@
     text-align: center !important;
     margin-right: auto;
     margin-left: auto;
+}
+
+.u-pt-30 {
+    padding-top: 30px;
+}
+
+.u-mt-30 {
+    margin-top: 30px;
 }
