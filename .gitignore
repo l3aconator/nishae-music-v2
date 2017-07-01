@@ -1,5 +1,6 @@
 # Sass
 .sass-cache
+package-lock.json
 
 # Grav Specific
 data/*
