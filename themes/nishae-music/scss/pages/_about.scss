@@ -2,7 +2,6 @@
 
     &.video-embed {
         padding-top: $large-padding;
-        // background-color: $dark-blue;
     }
 }
 
@@ -46,10 +45,19 @@
             }
         }
     }
+
+    .container {
+        max-width: 100%;
+    }
 }
 
 .header-img {
-    height: 50vh !important;
+    height: 70vh !important;
+    max-width: 100%;
+
+    .box {
+        margin-top: 10%;
+    }
 }
 
 @media (#{$bp-larger-than-tablet}) {

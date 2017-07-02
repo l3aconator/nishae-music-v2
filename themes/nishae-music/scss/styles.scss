@@ -3,8 +3,7 @@
 
 //Import Custom modules
 @import "modules/responsive-video";
-@import "modules/share-icons";
-@import "modules/cover-flow";
+// @import "modules/cover-flow";
 @import "modules/side-cta";
 
 //Load Icons
@@ -14,12 +13,10 @@
 @import "layout-partials/navigation";
 @import "layout-partials/base-template";
 @import "layout-partials/footer";
-@import "layout-partials/comments";
 
 //Import Pages
 @import "pages/home";
 @import "pages/kitchen-sink";
-@import "pages/music";
 @import "pages/song";
 @import "pages/about";
 @import "pages/blog";

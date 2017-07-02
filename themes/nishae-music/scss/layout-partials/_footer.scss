@@ -129,8 +129,9 @@
 
     .copyright {
         font-size: .875em;
-        color: $dark-blue;
-        background: darken($dark-blue, 10%);
-        padding: 20px 0px
+        color: $light-grey;
+        text-decoration: none;
+        margin-top: 30px;
+        display: block;
     }
 }

@@ -16,7 +16,7 @@ $white: white;
 
 // Brand Colors
 $dark-blue: #22386E !default;
-$turq: #B7F0F2 !default;
+$turq: darken(#B7F0F2, 12%) !default;
 $purple: #F1CEFF !default;
 $orange: #FFC9C0 !default;
 $red: $orange !default;
