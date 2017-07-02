@@ -27,10 +27,6 @@
     </div>
     <!--End mc_embed_signup-->
 </div>
-{% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
-<h4>Related Posts</h4>
-{% include 'partials/relatedpages.html.twig' %}
-{% endif %}
 {% if config.plugins.taxonomylist.enabled %}
 <div class="sidebar-content">
     <h4>Categories</h4>

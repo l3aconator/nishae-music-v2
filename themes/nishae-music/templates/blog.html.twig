@@ -7,7 +7,7 @@
 {% block content %}
 
 {% if ph.homepageHeader %}
-{% include 'partials/blogHero.html.twig' %}
+{% include 'partials/blog-hero.html.twig' %}
 {% endif %}
 
 <section class="blog-listings">
@@ -15,7 +15,7 @@
 		<div class="row">
 			{% for child in collection %}
 			<div class="four columns">
-				{% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
+				{% include 'partials/blog-item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
 				<hr />
 			</div>
 			{% endfor %}
