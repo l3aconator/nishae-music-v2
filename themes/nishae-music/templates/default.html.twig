@@ -12,16 +12,16 @@
 </section>
 {% endif %}
 
-{% if page.header.songSharing %}
-{% include 'partials/download-buy-three-col.html.twig' %}
-{% else %}
-{% include 'partials/email-cta.html.twig' %}
-{% endif %}
-
 <section>
     <div class="container section-pad">
         {{ page.content }}
     </div>
 </section>
+
+{% if page.header.songSharing %}
+{% include 'partials/download-buy-three-col.html.twig' %}
+{% else %}
+{% include 'partials/email-cta.html.twig' %}
+{% endif %}
 
 {% endblock %}
