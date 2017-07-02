@@ -405,6 +405,10 @@ hr {
   border-width: 0;
   border-top: 1px solid #D5D8E0; }
 
+img {
+  display: block;
+  width: 100%; }
+
 .u-full-width {
   width: 100%;
   box-sizing: border-box; }
@@ -434,6 +438,10 @@ hr {
   margin-right: auto;
   margin-left: auto; }
 
+.u-clear-spacing {
+  padding: 0 !important;
+  margin: 0 !important; }
+
 .u-pt-30 {
   padding-top: 30px; }
 
@@ -454,6 +462,9 @@ hr {
 
 .u-mb-30 {
   margin-bottom: 30px; }
+
+.u-mb-60 {
+  margin-bottom: 60px; }
 
 .u-pb-90 {
   padding-bottom: 90px; }
@@ -3231,10 +3242,10 @@ a.song-title {
     position: relative;
     z-index: 1;
     padding-top: 10px; }
-    .download-buy .options-box a {
+    .download-buy .options-box p a {
       color: #22386E;
       transition: color 200ms ease-in; }
-      .download-buy .options-box a:hover, .download-buy .options-box a:active, .download-buy .options-box a:focus {
+      .download-buy .options-box p a:hover, .download-buy .options-box p a:active, .download-buy .options-box p a:focus {
         color: #0a1020; }
     .download-buy .options-box:before {
       width: 100%;

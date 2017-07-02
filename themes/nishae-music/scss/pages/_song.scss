@@ -75,14 +75,17 @@
         z-index: 1;
         padding-top: 10px;
 
-        a {
-            color: $dark-blue;
-            transition: $link-transition;
+        p {
 
-            &:hover,
-            &:active,
-            &:focus {
-                color: darken($dark-blue, 20%);
+            a {
+                color: $dark-blue;
+                transition: $link-transition;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    color: darken($dark-blue, 20%);
+                }
             }
         }
 

@@ -30,7 +30,12 @@
                         <p>
                             {{ page.header.paypalCopy }}
                         </p>
-                        <a class="button dark fill u-full-width u-center-btn" href="/support-me">Support My Music</a>
+                        <form class="u-clear-spacing" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="KKVD9UVN2B9DU">
+                            <input class="button dark u-full-width u-center-btn" type="submit" value="Support my music"  name="submit" />
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -41,7 +46,7 @@
                         <p>
                             {{ page.header.spotifyCopy }}
                         </p>
-                        <a class="button dark fill u-full-width u-center-btn" href="/blog">Meraki Blog</a>
+                        <a class="button dark fill u-full-width u-center-btn" href="https://open.spotify.com/artist/6LmoGTofmo1i6zC1yxZjfy">Nishae on Spotify</a>
                     </div>
                 </div>
             </div>

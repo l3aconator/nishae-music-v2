@@ -1,6 +1,11 @@
 // Utilities
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
+img {
+    display: block;
+    width: 100%;
+}
+
 .u-full-width {
     width: 100%;
     box-sizing: border-box;
@@ -39,6 +44,11 @@
     margin-left: auto;
 }
 
+.u-clear-spacing {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 .u-pt-30 {
     padding-top: 30px;
 }
@@ -65,6 +75,10 @@
 
 .u-mb-30 {
     margin-bottom: 30px;
+}
+
+.u-mb-60 {
+    margin-bottom: 60px;
 }
 
 .u-pb-90 {
