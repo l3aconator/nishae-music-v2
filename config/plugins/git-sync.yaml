@@ -1,0 +1,18 @@
+enabled: true
+text_var: 'Custom Text added by the **Git Sync** plugin (disable plugin to remove)'
+folders:
+  - pages
+repository: 'https://github.com/l3aconator/nishae-music-v2.git'
+user: l3aconator
+password: gitsync-def5020081f8e664d239f9c5cefdbe22577c58097e45bb301412d5abaa2a81dbb8b35cb4ae10480955edd88cf2fb3ea073be8bc3fe0a3a77b4ca9c3000040330cdc4f4d35aa942891f5f5e8b0de8f85dd44d3da41806f9d2ce81bccd4d2f069698a1a16de35474476f829a55e1ff580490dcb840708f68764f80b5f7
+webhook: /_git-sync
+branch: master
+remote:
+  name: origin
+  branch: master
+git:
+  author: gituser
+  name: GitSync
+  email: git-sync@trilby.media
+  bin: git
+logging: false
